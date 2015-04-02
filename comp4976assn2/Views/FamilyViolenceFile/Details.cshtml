@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.ClientEntity.FamilyViolenceFileModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FamilyViolenceFileModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyViolenceFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamilyViolenceFile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FamilyViolenceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

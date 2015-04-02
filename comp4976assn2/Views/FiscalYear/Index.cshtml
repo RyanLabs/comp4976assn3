@@ -1,0 +1,33 @@
+﻿@model IEnumerable<comp4976assn2.Models.ClientEntity.FiscalYearModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FiscalYear)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FiscalYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FiscalId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FiscalId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FiscalId })
+        </td>
+    </tr>
+}
+
+</table>

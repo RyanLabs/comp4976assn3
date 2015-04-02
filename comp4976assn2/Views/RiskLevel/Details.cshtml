@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.ClientEntity.RiskLevelModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RiskLevelModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskLevel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RiskLevelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

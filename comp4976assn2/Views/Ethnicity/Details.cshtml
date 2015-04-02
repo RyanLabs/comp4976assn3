@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.ClientEntity.EthnicityModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EthnicityModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ethnicity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ethnicity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EthnicityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

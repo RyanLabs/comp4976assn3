@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.SmartEntity.SocialWorkAttendanceModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SocialWorkAttendanceModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialWorkAttendance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocialWorkAttendance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SocialWorkAttendanceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.SmartEntity.PoliceReportedModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PoliceReportedModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceReported)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceReported)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PoliceReportedId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

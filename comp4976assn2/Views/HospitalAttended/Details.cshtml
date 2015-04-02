@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.SmartEntity.HospitalAttendedModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HospitalAttendedModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HospitalAttended)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HospitalAttended)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HospitalAttendedId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

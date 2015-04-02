@@ -1,0 +1,33 @@
+﻿@model IEnumerable<comp4976assn2.Models.SmartEntity.EvidenceStoredModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EvidenceStored)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EvidenceStored)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EvidenceStoredId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EvidenceStoredId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EvidenceStoredId })
+        </td>
+    </tr>
+}
+
+</table>

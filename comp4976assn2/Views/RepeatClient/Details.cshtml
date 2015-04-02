@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.ClientEntity.RepeatClientModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RepeatClientModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatClient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatClient)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RepeatClientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

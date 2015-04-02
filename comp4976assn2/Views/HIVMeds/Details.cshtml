@@ -1,0 +1,26 @@
+﻿@model comp4976assn2.Models.SmartEntity.HIVMedsModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HIVMedsModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HIVMeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIVMeds)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HIVMedsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

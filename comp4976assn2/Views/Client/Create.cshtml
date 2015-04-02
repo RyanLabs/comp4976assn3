@@ -1,0 +1,296 @@
+﻿@model comp4976assn2.Models.ClientModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ClientModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.FiscalId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("FiscalId", String.Empty)
+                @Html.ValidationMessageFor(model => model.FiscalId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Month, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Month)
+                @Html.ValidationMessageFor(model => model.Month)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Day, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Day)
+                @Html.ValidationMessageFor(model => model.Day)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surname)
+                @Html.ValidationMessageFor(model => model.Surname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Firstname)
+                @Html.ValidationMessageFor(model => model.Firstname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PoliceFileNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PoliceFileNumber)
+                @Html.ValidationMessageFor(model => model.PoliceFileNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CourtFileNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CourtFileNumber)
+                @Html.ValidationMessageFor(model => model.CourtFileNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SwcFileNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SwcFileNumber)
+                @Html.ValidationMessageFor(model => model.SwcFileNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RiskLevelId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RiskLevelId", String.Empty)
+                @Html.ValidationMessageFor(model => model.RiskLevelId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CrisisId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CrisisId", String.Empty)
+                @Html.ValidationMessageFor(model => model.CrisisId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ServiceId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ServiceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ServiceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProgramId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProgramId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ProgramId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RiskAssessmentAssignedTo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RiskAssessmentAssignedTo)
+                @Html.ValidationMessageFor(model => model.RiskAssessmentAssignedTo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RiskStatusId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RiskStatusId", String.Empty)
+                @Html.ValidationMessageFor(model => model.RiskStatusId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AssignedWorkerId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AssignedWorkerId", String.Empty)
+                @Html.ValidationMessageFor(model => model.AssignedWorkerId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReferralSourceId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ReferralSourceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ReferralSourceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReferralContactId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ReferralContactId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ReferralContactId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IncidentId,  htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("IncidentId", String.Empty)
+                @Html.ValidationMessageFor(model => model.IncidentId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AbuserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AbuserName)
+                @Html.ValidationMessageFor(model => model.AbuserName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AbuserRelationshipId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AbuserRelationshipId", String.Empty)
+                @Html.ValidationMessageFor(model => model.AbuserRelationshipId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VictimOfIncidentId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("VictimOfIncidentId", String.Empty)
+                @Html.ValidationMessageFor(model => model.VictimOfIncidentId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FamilyViolenceFileId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FamilyViolenceFileId)
+                @Html.ValidationMessageFor(model => model.FamilyViolenceFileId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EthnicityId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("EthnicityId", String.Empty)
+                @Html.ValidationMessageFor(model => model.EthnicityId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AgeId,  htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AgeId", String.Empty)
+                @Html.ValidationMessageFor(model => model.AgeId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RepeatClientId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RepeatClientId", String.Empty)
+                @Html.ValidationMessageFor(model => model.RepeatClientId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DuplicateFileId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("DuplicateFileId", String.Empty)
+                @Html.ValidationMessageFor(model => model.DuplicateFileId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberChildren6, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberChildren6)
+                @Html.ValidationMessageFor(model => model.NumberChildren6)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberChildren12, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberChildren12)
+                @Html.ValidationMessageFor(model => model.NumberChildren12)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberChildren18, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberChildren18)
+                @Html.ValidationMessageFor(model => model.NumberChildren18)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FileStatusId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("FileStatusId", String.Empty)
+                @Html.ValidationMessageFor(model => model.FileStatusId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateLastTransfered, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateLastTransfered)
+                @Html.ValidationMessageFor(model => model.DateLastTransfered)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateClosed, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateClosed)
+                @Html.ValidationMessageFor(model => model.DateClosed)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateReopened, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateReopened)
+                @Html.ValidationMessageFor(model => model.DateReopened)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
