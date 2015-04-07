@@ -52,5 +52,7 @@ namespace comp4976assn2.Models
         public System.Data.Entity.DbSet<comp4976assn2.Models.SmartEntity.ThirdPartyReportModel> ThirdPartyReportModels { get; set; }
         public System.Data.Entity.DbSet<comp4976assn2.Models.SmartEntity.BadDateReportModel> BadDateReportModels { get; set; }
 
+        public System.Data.Entity.DbSet<comp4976assn2.Models.SmartModel> SmartModels { get; set; }
+
     }
 }
