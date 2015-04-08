@@ -6,9 +6,11 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
 </head>
-<body>
+<body ng-app="GoodSamaratin">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -24,6 +26,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("New Client", "Create", "Client")</li>
                     @if (ViewContext.HttpContext.User.IsInRole("Administrator"))
                     {
                         <li class="dropdown">
@@ -47,7 +50,7 @@
                                 <li>@Html.ActionLink("Risk Level", "Index", "RiskLevel")</li>
                                 <li>@Html.ActionLink("Risk Status", "Index", "RiskStatus")</li>
                                 <li>@Html.ActionLink("Service", "Index", "Service")</li>
-                                 <li>@Html.ActionLink("Victim Of Incident", "Index", "VictimOfIncident")</li>
+                                <li>@Html.ActionLink("Victim Of Incident", "Index", "VictimOfIncident")</li>
                             </ul>
                         </li>
 
@@ -77,8 +80,8 @@
                         <li>@Html.ActionLink("Administration", "Index", "Account")</li>
                     }
                 </ul>
-                            @Html.Partial("_LoginPartial")
-</div>
+                @Html.Partial("_LoginPartial")
+            </div>
         </div>
     </div>
     <div class="container body-content">
@@ -92,5 +95,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
