@@ -207,6 +207,7 @@
     <Compile Include="Controllers\ReferredToCBVSController.cs" />
     <Compile Include="Controllers\ReferringHospitalController.cs" />
     <Compile Include="Controllers\RepeatClientController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\RiskLevelController.cs" />
     <Compile Include="Controllers\RiskStatusController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -1270,6 +1271,7 @@
     <Content Include="Views\VictimServicesAttendance\Details.cshtml" />
     <Content Include="Views\VictimServicesAttendance\Edit.cshtml" />
     <Content Include="Views\VictimServicesAttendance\Index.cshtml" />
+    <Content Include="Views\Reports\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
