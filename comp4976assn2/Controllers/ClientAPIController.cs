@@ -18,9 +18,9 @@ namespace comp4976assn2.Controllers
         private ClientContext db = new ClientContext();
 
         // GET api/ClientAPI
-        public IQueryable<ClientModel> GetClients()
+        public List<ClientModel> GetClients()
         {
-            return db.Clients;
+            return db.Clients.ToList();
         }
 
         // GET api/ClientAPI/5

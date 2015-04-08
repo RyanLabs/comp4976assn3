@@ -11,10 +11,12 @@ app.controller("ClientController", function($scope) {
 app.controller("ReportController", function($scope) {
     $scope.testVar = "test variable";
 
-    $scope.months = monthss;
-    $scope.years = yearss;
+    $scope.months = months;
+    $scope.years = years;
     $scope.month_field = 'January';
     $scope.year_field = '2015';
+
+    $scope.currentDate = new Date();
 
     $scope.generate = function (month, year) {
         console.log("month: " + month + " year: " + year);
@@ -22,7 +24,7 @@ app.controller("ReportController", function($scope) {
 
 });
 
-var monthss = [
+var months = [
     { label: 'January', value: 1 },
     { label: 'February', value: 2 },
     { label: 'March', value: 3 },
@@ -37,7 +39,7 @@ var monthss = [
     { label: 'Decemeber', value: 12 }
 ];
 
-var yearss = [
+var years = [
     { label: '2000', value: 2000 },
     { label: '2001', value: 2001 },
     { label: '2002', value: 2002 },
