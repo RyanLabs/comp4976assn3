@@ -1,13 +1,10 @@
 ﻿var app;
 
 (function () {
-    app = angular.module("GoodSamaratin", []);
+    app = angular.module("app", []);
 })();
 
-app.controller("ClientController", function($scope) {
-});
-
-app.controller("ReportController", function($scope, $http) {
+app.controller("ReportController", function ($scope, $http) {
     $scope.hide = true;
     var baseUrl = 'http://localhost:10084/api/ClientAPI/';
     //var baseUrl = 'http://a3.brycendorsay.com/api/ClientAPI/';
@@ -20,15 +17,15 @@ app.controller("ReportController", function($scope, $http) {
     var date = new Date();
     $scope.currentDate = monthNames[date.getMonth()] + " " + date.getDay() + ", " + date.getFullYear();
 
-    $scope.generate = function(month, year) {
+    $scope.generate = function (month, year) {
 
         // Send the request
         $http.get(baseUrl + year + '/' + month)
-            .success(function(data) {
+            .success(function (data) {
                 console.log("success");
                 $scope.populateReport(data);
             })
-            .error(function(data) {
+            .error(function (data) {
                 console.log("error: " + data);
             });
 
@@ -36,7 +33,7 @@ app.controller("ReportController", function($scope, $http) {
         console.log("month: " + month + " year: " + year);
     };
 
-    $scope.populateReport = function(data) {
+    $scope.populateReport = function (data) {
         var report = JSON.parse(data);
         $scope.open = report.Open;
         $scope.closed = report.Closed;
@@ -59,18 +56,18 @@ app.controller("ReportController", function($scope, $http) {
 });
 
 var months = [
-    { label: 'January',     value: 1 },
-    { label: 'February',    value: 2 },
-    { label: 'March',       value: 3 },
-    { label: 'April',       value: 4 },
-    { label: 'May',         value: 5 },
-    { label: 'June',        value: 6 },
-    { label: 'July',        value: 7 },
-    { label: 'August',      value: 8 },
-    { label: 'September',   value: 9 },
-    { label: 'October',     value: 10 },
-    { label: 'November',    value: 11 },
-    { label: 'Decemeber',   value: 12 }
+    { label: 'January', value: 1 },
+    { label: 'February', value: 2 },
+    { label: 'March', value: 3 },
+    { label: 'April', value: 4 },
+    { label: 'May', value: 5 },
+    { label: 'June', value: 6 },
+    { label: 'July', value: 7 },
+    { label: 'August', value: 8 },
+    { label: 'September', value: 9 },
+    { label: 'October', value: 10 },
+    { label: 'November', value: 11 },
+    { label: 'Decemeber', value: 12 }
 ];
 
 var years = [
