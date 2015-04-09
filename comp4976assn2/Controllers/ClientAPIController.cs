@@ -9,7 +9,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Script.Serialization;
 using comp4976assn2.Models;
+using Newtonsoft.Json.Linq;
 
 namespace comp4976assn2.Controllers
 {
@@ -34,6 +36,43 @@ namespace comp4976assn2.Controllers
             }
 
             return Ok(clientmodel);
+        }
+
+        // GET api/ClientAPI/1/1
+        public string GetClientsReport(string year, int month)
+        {
+            Console.WriteLine("Accessed");
+            using (ClientContext ctx = new ClientContext())
+            {
+                
+                var clients = from c in ctx.Clients
+                              where c.Month.Equals(month)
+                              //where c.FiscalYear.Equals(year)
+                                   select c;
+
+                var reportObject = new ReportModel();
+                reportObject.Open = 10;
+                reportObject.Closed = 10;
+                reportObject.Reopened = 10;
+                reportObject.Crisis = 10;
+                reportObject.Court = 10;
+                reportObject.SMART = 10;
+                reportObject.DVU = 10;
+                reportObject.MCFD = 10;
+                reportObject.Male = 10;
+                reportObject.Female = 10;
+                reportObject.Trans = 10;
+                reportObject.Adult = 10;
+                reportObject.Youth12 = 10;
+                reportObject.Youth18 = 10;
+                reportObject.Child = 10;
+                reportObject.Senior = 10;
+
+                var json = new JavaScriptSerializer().Serialize(reportObject);
+
+                return json;
+            }
+
         }
 
         // PUT api/ClientAPI/5

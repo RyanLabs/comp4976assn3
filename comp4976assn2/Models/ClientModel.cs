@@ -33,14 +33,14 @@ namespace comp4976assn2.Models
         [Required]
         [StringLength(35)]
         [MaxLength(35)]
-        [RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Surname (Letters only)")]
+        //[RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Surname (Letters only)")]
         public String Surname { get; set; }
 
         [Required]
         [DisplayName("First Name")]
         [StringLength(35)]
         [MaxLength(35)]
-        [RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Firstname (Letters only)")]
+        //[RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Firstname (Letters only)")]
         public String Firstname { get; set; }
 
         [DisplayName("Police File Number")]
@@ -110,7 +110,7 @@ namespace comp4976assn2.Models
 
         [Required]
         [DisplayName("Abuser Surname, First Name")]
-        [RegularExpression(@"^([A-Za-z]+),\\s+([A-Za-z]+)$", ErrorMessage = "Format: Surname, First Name")]
+        //[RegularExpression(@"^([A-Za-z]+),\\s+([A-Za-z]+)$", ErrorMessage = "Format: Surname, First Name")]
         public String AbuserName { get; set; }
 
         [DisplayName("Abuser Relationship")]
@@ -132,7 +132,7 @@ namespace comp4976assn2.Models
         [MaxLength(1)]
         [StringLength(1)]
         [RegularExpression(@"^M|m|F|f|T|t$", ErrorMessage = "M or F or T (Trans)")]
-        public char Gender { get; set; }
+        public string Gender { get; set; }
 
         [DisplayName("Ethnicity")]
         [ForeignKey("Ethnicity")]
