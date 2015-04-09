@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int HIVMedsId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "HIV Meds")]
         public String HIVMeds { get; set; }
 
         public List<SmartModel> Smart { get; set; }

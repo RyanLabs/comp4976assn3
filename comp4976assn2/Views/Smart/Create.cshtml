@@ -1,0 +1,189 @@
+﻿@model comp4976assn2.Models.SmartModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>SmartModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccompanimentMinutes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccompanimentMinutes)
+                @Html.ValidationMessageFor(model => model.AccompanimentMinutes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NumberTransportsProvided, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberTransportsProvided)
+                @Html.ValidationMessageFor(model => model.NumberTransportsProvided)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReferredToNurse, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ReferredToNurse)
+                @Html.ValidationMessageFor(model => model.ReferredToNurse)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SexWorkExploitationId, "SexWorkExploitationId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("SexWorkExploitationId", String.Empty)
+                @Html.ValidationMessageFor(model => model.SexWorkExploitationId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MultiplePerpetratorsId, "MultiplePerpetratorsId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MultiplePerpetratorsId", String.Empty)
+                @Html.ValidationMessageFor(model => model.MultiplePerpetratorsId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DrugFacilitatedAssaultId, "DrugFacilitatedAssaultId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("DrugFacilitatedAssaultId", String.Empty)
+                @Html.ValidationMessageFor(model => model.DrugFacilitatedAssaultId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CityOfAssaultId, "CityOfAssaultId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CityOfAssaultId", String.Empty)
+                @Html.ValidationMessageFor(model => model.CityOfAssaultId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CityOfResidenceId, "CityOfResidenceId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CityOfResidenceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.CityOfResidenceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReferringHospitalid, "ReferringHospitalid", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ReferringHospitalid", String.Empty)
+                @Html.ValidationMessageFor(model => model.ReferringHospitalid)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HospitalAttendedId, "HospitalAttendedId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("HospitalAttendedId", String.Empty)
+                @Html.ValidationMessageFor(model => model.HospitalAttendedId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SocialWorkAttendanceId, "SocialWorkAttendanceId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("SocialWorkAttendanceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.SocialWorkAttendanceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PoliceAttendanceId, "PoliceAttendanceId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PoliceAttendanceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.PoliceAttendanceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VictimServicesAttendanceId, "VictimServicesAttendanceId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("VictimServicesAttendanceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.VictimServicesAttendanceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MedicalOnlyId, "MedicalOnlyId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MedicalOnlyId", String.Empty)
+                @Html.ValidationMessageFor(model => model.MedicalOnlyId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EvidenceStoredId, "EvidenceStoredId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("EvidenceStoredId", String.Empty)
+                @Html.ValidationMessageFor(model => model.EvidenceStoredId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HivMedsId, "HivMedsId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("HivMedsId", String.Empty)
+                @Html.ValidationMessageFor(model => model.HivMedsId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReferredToCbvsId, "ReferredToCbvsId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ReferredToCbvsId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ReferredToCbvsId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PoliceReportedId, "PoliceReportedId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PoliceReportedId", String.Empty)
+                @Html.ValidationMessageFor(model => model.PoliceReportedId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThirdPartyReportId, "ThirdPartyReportId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ThirdPartyReportId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ThirdPartyReportId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BadDateReportId, "BadDateReportId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("BadDateReportId", String.Empty)
+                @Html.ValidationMessageFor(model => model.BadDateReportId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

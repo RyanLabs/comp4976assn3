@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int ReferredToCBVSId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Referral CBVS")]
         public String ReferredToCBVS { get; set; }
 
         public List<SmartModel> Smart { get; set; }

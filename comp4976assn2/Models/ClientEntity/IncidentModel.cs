@@ -11,6 +11,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int IncidentId { get; set; }
         public String Incident { get; set; }
-        public ICollection<IncidentModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }

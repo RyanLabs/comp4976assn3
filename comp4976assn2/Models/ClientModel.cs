@@ -32,20 +32,20 @@ namespace comp4976assn2.Models
 
         [Required]
         [StringLength(35)]
-        [MaxLength(35)]
+        [MaxLength(35, ErrorMessage = "Error maxlength")]
         //[RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Surname (Letters only)")]
         public String Surname { get; set; }
 
         [Required]
         [DisplayName("First Name")]
         [StringLength(35)]
-        [MaxLength(35)]
+        [MaxLength(35, ErrorMessage = "Error maxlength")]
         //[RegularExpression("/^[a-zA-Z]+$/", ErrorMessage = "Invalid Firstname (Letters only)")]
         public String Firstname { get; set; }
 
         [DisplayName("Police File Number")]
         [StringLength(8)]
-        [MaxLength(8)]
+        [MaxLength(8, ErrorMessage = "Error maxlength")]
         [RegularExpression(@"^\d{2}-\d{5}$", ErrorMessage = "Format: 99-99999 (example: 14-77852).")]
         public String PoliceFileNumber { get; set; } //Nullable
 
@@ -80,7 +80,7 @@ namespace comp4976assn2.Models
         [Required]
         [DisplayName("Risk Assessment Assigned To")]
         [StringLength(70)]
-        [MaxLength(70)]
+        [MaxLength(70, ErrorMessage = "Error maxlength")]
         public String RiskAssessmentAssignedTo { get; set; }
 
         [DisplayName("Risk Status")]
@@ -129,7 +129,7 @@ namespace comp4976assn2.Models
         public virtual FamilyViolenceFileModel FamilyViolenceFile { get; set; }
 
         [Required]
-        [MaxLength(1)]
+        [MaxLength(1, ErrorMessage = "Error maxlength")]
         [StringLength(1)]
         [RegularExpression(@"^M|m|F|f|T|t$", ErrorMessage = "M or F or T (Trans)")]
         public string Gender { get; set; }
@@ -169,15 +169,15 @@ namespace comp4976assn2.Models
         public virtual FileStatusModel FileStatus { get; set; }
 
         [DisplayName("Date Last Transferred")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date, ErrorMessage = "Data type")]
         public DateTime DateLastTransfered { get; set; }
 
         [DisplayName("Date Closed")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date, ErrorMessage = "Data type")]
         public DateTime DateClosed { get; set; }
 
         [DisplayName("Date Re-opened")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date, ErrorMessage = "Data type")]
         public DateTime DateReopened { get; set; }
 
     }

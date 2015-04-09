@@ -11,6 +11,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int FileStatusId { get; set; }
         public String FileStatus { get; set; }
-        public ICollection<FileStatusModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }

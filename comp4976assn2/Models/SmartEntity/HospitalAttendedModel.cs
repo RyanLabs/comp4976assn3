@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int HospitalAttendedId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Hospital Attended")]
         public String HospitalAttended { get; set; }
 
         public List<SmartModel> Smart { get; set; }

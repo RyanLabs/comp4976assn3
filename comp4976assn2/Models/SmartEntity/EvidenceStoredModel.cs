@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int EvidenceStoredId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Evidence Stored")]
         public String EvidenceStored { get; set; }
 
         public List<SmartModel> Smart { get; set; }

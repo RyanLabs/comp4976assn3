@@ -11,6 +11,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int ServiceId { get; set; }
         public String Service { get; set; }
-        public ICollection<ServiceModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }

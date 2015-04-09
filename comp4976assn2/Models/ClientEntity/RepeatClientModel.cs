@@ -12,6 +12,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int RepeatClientId { get; set; }
         public String RepeatClient { get; set; }
-        public ICollection<RepeatClientModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }

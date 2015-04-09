@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int CityOfAssaultId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "City OF Assault")]
         public String CityOfAssault { get; set; }
 
         public List<SmartModel> Smart { get; set; }

@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int SocialWorkAttendanceId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Social Work Attendance")]
         public String SocialWorkAttendance { get; set; }
 
         public List<SmartModel> Smart { get; set; }

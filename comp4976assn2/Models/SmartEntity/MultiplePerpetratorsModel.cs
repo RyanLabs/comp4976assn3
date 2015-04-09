@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int MultiplePerpetratorsId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Multiple Perpetrators")]
         public String MultiplePerpetrators { get; set; }
 
         public List<SmartModel> Smart { get; set; }

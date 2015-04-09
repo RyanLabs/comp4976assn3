@@ -11,6 +11,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int EthnicityId { get; set; }
         public String Ethnicity { get; set; }
-        public ICollection<EthnicityModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }

@@ -10,6 +10,10 @@ namespace comp4976assn2.Models.SmartEntity
     {
         [Key]
         public int PoliceReportedId { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        [Display(Name = "Police Reported")]
         public String PoliceReported { get; set; }
 
         public List<SmartModel> Smart { get; set; }

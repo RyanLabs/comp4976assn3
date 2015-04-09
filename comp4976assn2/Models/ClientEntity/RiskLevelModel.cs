@@ -11,6 +11,6 @@ namespace comp4976assn2.Models.ClientEntity
         [Key]
         public int RiskLevelId { get; set; }
         public String RiskLevel { get; set; }
-        public ICollection<RiskLevelModel> Clients { get; set; }
+        public List<ClientModel> Client { get; set; }
     }
 }
