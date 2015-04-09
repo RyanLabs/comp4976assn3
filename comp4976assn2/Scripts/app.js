@@ -10,6 +10,7 @@ app.controller("ClientController", function($scope) {
 app.controller("ReportController", function($scope, $http) {
     $scope.hide = true;
     var baseUrl = 'http://localhost:10084/api/ClientAPI/';
+    //var baseUrl = 'http://a3.brycendorsay.com/api/ClientAPI/';
 
     $scope.months = months;
     $scope.years = years;

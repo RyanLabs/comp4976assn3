@@ -48,20 +48,20 @@ namespace comp4976assn2.Controllers
                 var clients = from c in ctx.Clients
                               where c.Month.Equals(month)
                               //where c.FiscalYear.Equals(year)
-                                   select c;
+                              select c;
 
                 var reportObject = new ReportModel();
-                reportObject.Open = 10;
-                reportObject.Closed = 10;
-                reportObject.Reopened = 10;
-                reportObject.Crisis = 10;
-                reportObject.Court = 10;
-                reportObject.SMART = 10;
-                reportObject.DVU = 10;
-                reportObject.MCFD = 10;
-                reportObject.Male = 10;
-                reportObject.Female = 10;
-                reportObject.Trans = 10;
+                reportObject.Open = (from c in clients where c.FileStatus.FileStatus == "Open" select c).Count();
+                reportObject.Closed = (from c in clients where c.FileStatus.FileStatus == "Closed" select c).Count();
+                reportObject.Reopened = (from c in clients where c.FileStatus.FileStatus == "Reopened" select c).Count();
+                reportObject.Crisis = (from c in clients where c.Program.Program == "Crisis" select c).Count();
+                reportObject.Court = (from c in clients where c.Program.Program == "Court" select c).Count();
+                reportObject.SMART = (from c in clients where c.Program.Program == "SMART" select c).Count();
+                reportObject.DVU = (from c in clients where c.Program.Program == "DVU" select c).Count();
+                reportObject.MCFD = (from c in clients where c.Program.Program == "MCFD" select c).Count();
+                reportObject.Male = (from c in clients where c.Gender == "M" select c).Count();
+                reportObject.Female = (from c in clients where c.Gender == "F" select c).Count();
+                reportObject.Trans = (from c in clients where c.Gender == "T" select c).Count();
                 reportObject.Adult = 10;
                 reportObject.Youth12 = 10;
                 reportObject.Youth18 = 10;
